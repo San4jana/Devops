@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<!-- Coding by CodingLab || www.codinglabweb.com -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game in HTML CSS & JavaScript</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>Guess a number from 1 to 100</header>
-      <p class="guess"></p>
-      <div class="input-field">
-        <input type="number" />
-        <button>Check</button>
-      </div>
-      <p>You have <span class="chances">10</span> chances</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Random Number Guessing Game</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Number Guessing Game</h1>
+        <div class="login">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username">
+            <button onclick="login()">Login</button>
+        </div>
+        <div class="game">
+            <h2>Welcome, <span id="user"></span>!</h2>
+            <p>Guess the number between 1 and 100:</p>
+            <input type="number" id="guess" min="1" max="100">
+            <button onclick="checkGuess()">Submit Guess</button>
+            <p id="message"></p>
+        </div>
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <ol id="leaderList"></ol>
+        </div>
     </div>
-
-    <script src="script.js" defer></script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
